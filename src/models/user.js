@@ -59,14 +59,14 @@ const UserSchema = new Schema(
       trim: true,
     },
     creatorId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "service_user",
-      required: true,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "service_user",
+        required: true
     },
-    gender: {
-      type: String,
-      enum: ["male", "female"],
-      required: true,
+    gender: { 
+        type: String,
+        enum: ['male', 'female'],
+        required: true
     },
     status: {
       type: String,
