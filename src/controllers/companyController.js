@@ -43,7 +43,11 @@ const company = {
   createCompany: async (req, res) => {
     const { name } = req.body;
     try {
-      const company = new companyModel({ name, creatorId: req.user._id });
+      const company = new companyModel({
+        name,
+        creatorId: req.user._id,
+        companyinfo: req.body.companyinfo,
+      });
       await company.save();
       res.json({
         status: "Success",
